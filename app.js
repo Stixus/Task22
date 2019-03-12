@@ -11,6 +11,8 @@ function pet(name, age, type) {
 
 var data = new pet("Spot", 3, "dog");
 
+app.use("/static", express.static("images"));
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
