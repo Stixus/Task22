@@ -15,6 +15,14 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
+app.get("/info", (req, res) => {
+  res.sendFile(path.join(__dirname + "/info.html"));
+});
+
+app.get("/pictures", (req, res) => {
+  res.sendFile(path.join(__dirname + "/pictures.html"));
+});
+
 app.get("/data", (req, res) => {
   res.json(data);
 });
