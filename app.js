@@ -9,7 +9,8 @@ function pet(name, age, type) {
   this.type = type;
 }
 
-var data = new pet("Spot", 3, "dog");
+var pet1 = new pet("Spot", 3, "dog");
+var pet2 = new pet("Bubba", 10, "musk ox");
 
 app.use("/static", express.static("images"));
 
@@ -26,7 +27,7 @@ app.get("/pictures", (req, res) => {
 });
 
 app.get("/data", (req, res) => {
-  res.json(data);
+  res.json(pet1, pet2);
 });
 
 app.listen(process.env.PORT || 8080);
