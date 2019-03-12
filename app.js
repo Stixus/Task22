@@ -9,10 +9,12 @@ function pet(name, age, type) {
   this.type = type;
 }
 
-var pets = function() {
-  var pet1 = new pet("Spot", 3, "Doge");
-  return [pet1];
-};
+function pets() {
+  var petsArray = [];
+  petsArray.push(new pet("Spot", 3, "Dog"));
+  petsArray.push(new pet("Bubba", 10, "Musk Ox"));
+  return petsArray;
+}
 
 app.use("/static", express.static("images"));
 
@@ -29,7 +31,7 @@ app.get("/pictures", (req, res) => {
 });
 
 app.get("/data", (req, res) => {
-  res.json(pets);
+  res.json(pets());
 });
 
 app.listen(process.env.PORT || 8080);
