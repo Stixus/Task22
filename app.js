@@ -12,7 +12,7 @@ function pet(name, age, type) {
 var data = new pet("Spot", 3, "dog");
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/hello.html"));
+  res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 app.get("/data", (req, res) => {
