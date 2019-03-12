@@ -27,7 +27,8 @@ app.get("/pictures", (req, res) => {
 });
 
 app.get("/data", (req, res) => {
-  res.json(pet1, pet2);
+  res.json(pet1);
+  res.json(pet2);
 });
 
 app.listen(process.env.PORT || 8080);
